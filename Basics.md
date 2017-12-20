@@ -37,7 +37,7 @@ Use scopes to express code better. Many people seem to miss this.
 
 Scopes have several advantages:
 - variables local to the scope can't be seen outside
-- grouping statements into a scope halps understanding which parts of a function belong together
+- grouping statements into a scope helps understanding which parts of a function belong together
 
 ### Code duplication is *BAD*
 
@@ -73,7 +73,7 @@ Reminder: `auto` does not deduce constness or references.
 When declaring a variable, a few questions can quickly lead to cleaner code:
 - Is the variable about some other memory location that will be set? Yes means non-const ref. `&`
 - Otherwise, does the variable refer to some other big memory location? Yes means const ref. `const &`
-- Or is the variable small? Yes means no ref no const. ``
+- Or is the variable small? Yes means no ref no const.
 - I don't know which of the two last (ex: template type etc.) `&&`
 
 Mixing up the second and third case is not really bad. Note that `&&` can also mean move semantics. More on that later.

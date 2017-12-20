@@ -81,5 +81,5 @@ It's not a major sin: just under optimal and badly conveys intent, or even makes
 
 ## End of the basics
 
-This concludes he basics. Nothing crazy or flashy. Maybe you should be doing some Python?
+This concludes the basics. Nothing crazy or flashy. Maybe you should be doing some Python?
 

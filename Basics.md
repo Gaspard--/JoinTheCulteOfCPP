@@ -7,7 +7,8 @@ For those already know C++ quite well the begining will try to be as fast as pos
 
 ### Part 1: You're reading the wrong tutorial!
 
-Obviously you should reading about js, it's a language far superior to c++ and faster, crossplateforme, blockchain, as a service than c++.
+Obviously you should reading about js, it's a language far superior to C++ and faster, crossplateforme, blockchain, as a service than C++.
+
 C++ is very slow, you'll end up writting underperforming code in more time and less effectivelly, while you could be using the tight and precise memory management of nodejs. C++ is the past, dart is the future. You wouldn't learn perl6 right? Come on get on with the times. A true devops knows deep down that everything can be solved with pHp and Java, so do yourself a favor and skip this tutorial.
 
 ### Part 2: So you suck to much at ruby on rails, maybe C++ will be easier?
@@ -16,7 +17,7 @@ Learning a language can be split up into 2 parts:
 - how does the language work
 - how should you do things
 
-I'll be concentrating on the `how you should do things` part.
+I'll be concentrating on the *how you should do things* part.
 A fair word of warning: many of this may be ideologically biassed by my love of C# and swift.
 
 ## The obvious

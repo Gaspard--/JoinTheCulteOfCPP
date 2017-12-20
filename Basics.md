@@ -79,7 +79,7 @@ If using `nullptr`, would `std::optional` do a *better* job?
 It's not rare and hard to spot when someone takes a reference on something bigger than he needs.
 It's not a major sin: just under optimal and badly conveys intent, or even makes some optimisations / refactoring non-obvious.
 
-### End of the basics
+## End of the basics
 
 This concludes he basics. Nothing crazy or flashy. Maybe you should be doing some Python?
 

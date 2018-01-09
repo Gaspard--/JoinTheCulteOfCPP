@@ -48,7 +48,7 @@ It is strongly advised to never have a resource that isn't managed by a class.
 
 Using only scopes and allocated memory as places to create and destroy objects works pretty well, but forces you to write some underoptimal code.
 
-Welcome to the concept of ownership: a `std::unique_ptr` can abandon it's pointer using its ```release()``` method.
+Welcome to the concept of ownership: a `std::unique_ptr` can abandon its pointer using its ```release()``` method.
 
 But that is still a little to low-level and easy to get wrong.
 
@@ -58,7 +58,7 @@ But that is still a little to low-level and easy to get wrong.
 
 ```std::unique_ptr b(std::move(a))```
 
-`a` gives it's pointer to `b`, allowing you to freely move pointers around without having the risk of pointer not being freed.
+`a` gives its pointer to `b`, allowing you to freely move pointers around without having the risk of pointer not being freed.
 
 Adding move constructors is generally a good idea, be careful about the fact that moving an object invalidates references to it however.
 

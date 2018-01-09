@@ -137,7 +137,7 @@ This is usually the moment to think about encapsulation, i.e. who has access:
  - Who should be able to instanciate this class?
    - Should this class be inherited and not inherited directly? -> protected destructor
    - Should this class be a singleton? -> private destructor (Not advocating for it, but you never know)
-   - Is this class an interface for runtime polymorphisme? -> virtual protected destructor (*Remember what I said and reflect on your life choices*)
+   - Is this class an interface for runtime polymorphism? -> virtual protected destructor (*Remember what I said and reflect on your life choices*)
  - Is the data of the subclass always used together, or am I running into the "many accessors, many parameters hell"?
  - Is this class theoretically possible? (yeah I get asked to invent classes that can't theoretically exist sometimes...)
 

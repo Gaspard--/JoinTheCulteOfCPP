@@ -14,9 +14,9 @@ The problem with virtual is that it looks like a solution to your problems, but 
 
 So if you thought classes mean `virtual`, think again.
 
-A `class` as a service usually represents some big functionnality. It is very tempting to make everything a functionality.
+A `class` as a service usually represents some big functionality. It is very tempting to make everything a functionality.
 
-Tha quickly leads to unoptimised OOP code, and *miss Cache* will be angry.
+That quickly leads to unoptimised OOP code, and *miss Cache* will be angry.
 
 // insert image of angry  miss cache here
 
@@ -64,7 +64,7 @@ Adding move constructors is generally a good idea, be careful about the fact tha
 
 ## `class` as data
 
-When thinking about preformance, logic, sanity, and memory, this is usually what a `class` should be about.
+When thinking about performance, logic, sanity, and memory, this is usually what a `class` should be about.
 
 Fundamentally in C, a struct serves to regroup data together:
  - this garanties data locality (miss Cache will *love* you)
@@ -74,14 +74,14 @@ In C++, `class` can be templated, this allows even more:
  - Create abstraction over multiple types to avoid code duplication
  - Reduce memory usage, increase performance, and reduce bug possibillities by having compile-time data.
 
-Data can usually be owned, so when building classes with data in mind, it's usually easy to apply ressource ownership concepts.
+Data can usually be owned, so when building classes with data in mind, it's usually easy to apply resource ownership concepts.
 
 Now for the thing where miss Cache *hates* you:
 
 Pointers, wait you thought that was kinda bad? Function pointers!
 
 Think about every time you use a pointer or reference:
- - When using pointer, is to spare data? Are you realy sparing a noticeable amount of data? (more often than not, no)
+ - When using pointer, is to spare data? Are you really sparing a noticeable amount of data? (more often than not, no)
  - Does the data structure you're building require pointers? Could they be indexes to a contiguous memory area saving memory, increasing data locality? (*Do it for miss Cache!*)
  - Is this safe at all? A pointer is the typical case of something that looks simple, acts simple, and sudenly breaks, because a pointer can become invalid. (think especially about reallocation, it's the classical \#1 catch)
  - Could this pointer be an iterator, which could both be easier to understand, and provide better context?
@@ -97,13 +97,13 @@ Generally speaking, pointers make more sense in data classes than references.
 
 ### `std::variant`, `std::optional` etc.
 
-Variants can be very usefull to help organise data state.
+Variants can be very useful to help organise data state.
 
 The goal should be to avoid impossible states.
 
 Variants do add the cost of an additional branching of course, but if you already have a branch they only provide benefits and potentially save memory.
 
-*If your class contains an non-constexpr enum field, using variants usually will usually result in better code.*
+*If your class contains an non-constexpr enum field, using variants will usually result in better code.*
 
 ## `class` as proxy
 

@@ -124,11 +124,11 @@ Proxies can have different uses:
  - Access proxies, which serve to access something else (through the `operator=` member)
    - Iterators are an important subcategory here. They help simplify code a lot.
  - Return value proxies, which usually act as data holders too (typical use of std::opional), they usually are there because additional information needs to be returned.
- - Parameter proxies. Yeah, rare case, good luck with those, there' usually a better, superrior and simpler way.
+ - Parameter proxies. Yeah. Rare case. Good luck with those. There's usually a better, superior and simpler way.
 
-## When should I make a subclasse?
+## When should I make a subclass?
 
-This is the question about life, the usniverse, and how much your mum is affected by the universes expansion rate.
+This is the question about life, the universe, and how much your mum is affected by the universes expansion rate.
 
 ~~Python is the answer.~~
 

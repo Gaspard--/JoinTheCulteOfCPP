@@ -1,6 +1,7 @@
 # Classes
 
 *First, God created `virtual`, God saw `virtual` was good, then God created Java and everybody stopped using C++.*
+
 I will be using `class` and `struct` interchageably, because they are nearly the same thing.
 
 ## `class` *as a service*
@@ -29,33 +30,37 @@ Compare this `std::visit`, which allows for about the same ideas, whithout the h
 
 Ever noted how we like assign blame to people?
 
-Well could news! Instead of dumping your anger on your mates you can dump it on your classes!
+Well good news! Instead of dumping your anger on your mates you can dump it on your classes!
 
-This is a very simple principal, but which creates a whole series of patterns.
+This is a very simple concept, however it creates a whole series of code patterns.
 
 ### RAII
 
 The worst acronyme ever.
 
-The concept is simple: assign a resource to a class which the class will release in destructor.
+The concept is simple: assign a resource to a class which the class will release in it's destructor.
 
 Example: `std::unique_ptr`, which holds an allocated pointer that it will free upon destruction, `std::fstream`, which can open a file and hold it's handle, and close it upon destruction, and many more from the standart library.
 
-It is advisedd to never have a ressource that isn't managed by a class.
+It is strongly advised to never have a ressource that isn't managed by a class.
 
 ### Ownership
 
-Using only scopes and allocated memory as places to create destroy objects works pretty well but forces you to write some underoptimal code.
+Using only scopes and allocated memory as places to create and destroy objects works pretty well, but forces you to write some underoptimal code.
 
-Wellcome to the concept of ownership: a `std::unique_ptr` can abandone it's pointer using it's ```release()``` method.
+Welcome to the concept of ownership: a `std::unique_ptr` can abandone it's pointer using it's ```release()``` method.
 
 But that is still a little to low-level and easy to get wrong.
 
 #### Move assignement and construction
 
 `std::unique_ptr` is movable, this allows you to write:
+
 ```std::unique_ptr b(std::move(a))```
+
 `a` gives it's pointer to `b`, allowing you to freely move pointers around without having the risk of pointer not being free'd.
+
+Adding move constructors is generally a good idea, be carefull about the fact that moving an object invalidates references to it however.
 
 ## `class` as data
 
@@ -65,11 +70,11 @@ Fundamentally in C, a struct serves to regroup data together:
  - this garanties data locality (miss Cache will *love* you)
  - allows for easier understanding of what goes together
 
-In C++, `class` can be templated, this gives even more:
+In C++, `class` can be templated, this allows even more:
  - Create abstraction over multiple types to avoid code duplication
  - Reduce memory usage, increase performance, and reduce bug possibillities by having compile-time data.
 
-Data can usually be owned, so when building classes with data in mind, it's usually easy to apply ressource ownership.
+Data can usually be owned, so when building classes with data in mind, it's usually easy to apply ressource ownership concepts.
 
 Now for the thing where miss Cache *hates* you:
 
@@ -86,16 +91,19 @@ Think even more when using a function pointer:
  - Consider using `std::function`
  - Can you extract this pointer / `std::function` further (__This is very important__)
  - If this pointer is set often, this usually a bad sign (miss Cache is watching *you*!)
+ 
+This type is generally expected to be able to live a long time.
+Generally speaking, pointers make more sense in data classes than references.
 
 ### `std::variant`, `std::optional` etc.
 
-Variants can be very usefull to help organise code state.
+Variants can be very usefull to help organise data state.
 
 The goal should be to avoid impossible states.
 
-Variants do cost the branching of course, but if you already have a branch they only provide benefits and potentially save memory.
+Variants do add the cost of an additional branching of course, but if you already have a branch they only provide benefits and potentially save memory.
 
-*If your class contains an non-constexpr enum field, using varaints usually will usually result in better code.*
+*If your class contains an non-constexpr enum field, using variants usually will usually result in better code.*
 
 ## `class` as proxy
 

@@ -1,17 +1,17 @@
 # Tutorial C++
 
-## Prerequisits
+## Prerequisites
 
-This tutorial is intended for those that have some knowledge of C and C++.
-For those already know C++ quite well the begining will try to be as fast as possible to skim over.
+This tutorial is intended for those who have some knowledge of C and C++.
+For those who already know C++ quite well, the begining will try to be as fast as possible to skim over.
 
 ### Part 1: You're reading the wrong tutorial!
 
-Obviously you should reading about js, it's a language far superior to C++ and faster, crossplateforme, blockchain, as a service than C++.
+Obviously you should reading about js, it's a language far superior to C++ and faster, crossplateform, blockchain, as a service than C++.
 
-C++ is very slow, you'll end up writting underperforming code in more time and less effectivelly, while you could be using the tight and precise memory management of nodejs. C++ is the past, dart is the future. You wouldn't learn perl6 right? Come on get on with the times. A true devops knows deep down that everything can be solved with pHp and Java, so do yourself a favor and skip this tutorial.
+C++ is very slow, you'll end up writing underperforming code in more time and less effectively, while you could be using the tight and precise memory management of nodejs. C++ is the past, dart is the future. You wouldn't learn perl6 right? Come on get on with the times. A true devops knows deep down that everything can be solved with pHp and Java, so do yourself a favor and skip this tutorial.
 
-### Part 2: So you suck to much at ruby on rails, maybe C++ will be easier?
+### Part 2: So you suck too much at ruby on rails, maybe C++ will be easier?
 
 Learning a language can be split up into 2 parts:
 - how does the language work
@@ -19,7 +19,7 @@ Learning a language can be split up into 2 parts:
 
 I'll be concentrating on the *how you should do things* part.
 
-A fair word of warning: many of this may be ideologically biassed by my love of C# and swift.
+A fair word of warning: many of this may be ideologically biased by my love of C# and swift.
 
 ## The obvious
 
@@ -27,7 +27,7 @@ A fair word of warning: many of this may be ideologically biassed by my love of 
 
 Sometimes you may brake some rules due to tight deadlines or lack of knowledge to avoid the problem.
 
-Losing to much time on elegance is not very productive...
+Losing too much time on elegance is not very productive...
 
 That's life! You can always fixup later.
 
@@ -51,7 +51,7 @@ Functions are really cool. You should use them more often!
 
 Functions have the same benefits of scopes, but some bonuses:
 - they isolate the other way around too!
-- constnes of all passed variable refs can be changed
+- constness of all passed variable refs can be changed
 - help reduce code duplication because they are reusable.
 
 However try not to end up in the land of one assembly instruction per function.
@@ -62,7 +62,7 @@ Also if 2 functions must always be called after another, that's a bad sign.
 
 #### `auto` is your friend
 
-`auto` is flexible, alows for easier refatoring, and uses only four chars. Don't be scared of it!
+`auto` is flexible, alows for easier refactoring, and uses only four chars. Don't be scared of it!
 
 `decltype(...)` can help if knowing the type is important.
 

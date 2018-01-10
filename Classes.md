@@ -128,7 +128,7 @@ Proxies can have different uses:
 
 ## When should I make a subclass?
 
-This is the question about life, the universe, and how much your mum is affected by the universes expansion rate.
+This is the question about life, the universe, and how much your mum is affected by the universe's expansion rate.
 
 ~~Python is the answer.~~
 

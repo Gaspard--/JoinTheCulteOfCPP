@@ -134,8 +134,8 @@ This is the question about life, the universe, and how much your mum is affected
 
 This is usually the moment to think about encapsulation, i.e. who has access:
  - Be careful not to think about what your class will do but more about to what it has access.
- - Who should be able to instanciate this class?
-   - Should this class be inherited and not inherited directly? -> protected destructor
+ - Who should be able to instanciate this class? This affects the destructor:
+   - Should this class be inherited and not instanciated directly? -> protected destructor
    - Should this class be a singleton? -> private destructor (Not advocating for it, but you never know)
    - Is this class an interface for runtime polymorphism? -> virtual protected destructor (*Remember what I said and reflect on your life choices*)
  - Is the data of the subclass always used together, or am I running into the "many accessors, many parameters hell"?
